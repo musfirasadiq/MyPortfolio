@@ -1,0 +1,81 @@
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #231f20 30%, #0e0e0e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevent any overflow during animation */
+  }
+  
+  /* Hero Container */
+  .hero-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Left Side Styling */
+  .hero-left {
+    flex: 1;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1.5s ease-out forwards; /* Fade-in and slide-up animation */
+    animation-delay: 0.3s; /* Delay for smoother animation */
+  }
+  
+  .hero-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .hero-left h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  
+  /* Right Side Styling */
+  .hero-right {
+    flex: 1;
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: 1rem;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.5s; /* Delay for smoother animation */
+  }
+  
+  /* Fade-in and Slide-up Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start from a slight offset below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to original position */
+    }
+  }
+  
+  /* Navigation Dots */
+  .nav-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+  

@@ -1,0 +1,64 @@
+<!-- Add Font Awesome CDN in the head section of your HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<section id="contact" class="contact-container">
+    <h1 class="section-title">Contact Me</h1>
+
+    <p class="contact-info">
+        Feel free to reach out for collaborations, job opportunities, or just a chat!
+    </p>
+
+    <form 
+        action="https://formsubmit.co/musfira443@gmail.com" 
+        method="POST" 
+        class="contact-form"
+    >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <!-- Add a hidden field for security -->
+        <input type="hidden" name="_captcha" value="false" />
+
+        <!-- Optional: Add redirect on success -->
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+
+        <button type="submit" class="send-btn">Send Message</button>
+    </form>
+
+    <div class="contact-links">
+        <h2>Connect with me</h2>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/musfira-l-a-a481222b0/" target="_blank" class="highlight">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/+971524116996" target="_blank" class="highlight">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/musfirabinth.abdulkhadir" target="_blank" class="highlight">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/musfirasadiq" target="_blank" class="highlight">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/glowing_with_happiness/" target="_blank" class="highlight">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </li>
+            <li>
+                <span class="highlight">
+                    <i class="fas fa-map-marker-alt"></i> Sharjah, United Arab Emirates
+                </span>
+            </li>
+        </ul>
+    </div>
+</section>

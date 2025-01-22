@@ -1,0 +1,110 @@
+/* Experience Section */
+.experience-container {
+    padding: 60px 10%;
+    background: radial-gradient(circle, #231f20 30%, #0e0e0e);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    display: inline-block;
+  }
+  
+  /* Experience Card */
+  .experience-card {
+    background: #181818;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: left;
+  }
+  
+  .company-header {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .company-header h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  .job-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcc00;
+  }
+  
+  .job-duration {
+    font-size: 1rem;
+    color: #aaa;
+  }
+  
+  .experience-description ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .experience-description li {
+    margin: 8px 0;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .experience-description li::before {
+    content: "✔";
+    color: #ffcc00;
+    position: absolute;
+    left: 0;
+  }
+  
+  .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .highlight:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Add a delay for each experience card */
+  .experience-card:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .experience-card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .experience-card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  

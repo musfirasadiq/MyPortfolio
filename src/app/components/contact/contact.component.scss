@@ -1,0 +1,168 @@
+/* Contact Section */
+.contact-container {
+    padding: 60px 10%;
+    background: radial-gradient(circle, #231f20 30%, #0e0e0e);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    display: inline-block;
+  }
+  
+  .contact-info {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  /* Send Button */
+  .send-btn {
+    background: #ffcc00;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .send-btn:hover {
+    background: #e6b800;
+  }
+  /* Contact Links Section */
+.contact-links {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  .contact-links h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-links li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .contact-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-links i {
+    font-size: 1.5rem; /* Icon size */
+  }
+  
+  .contact-links span i {
+    font-size: 1.5rem; /* Icon size for location */
+  }
+  /* Animation for Fade-in */
+.contact-container {
+    padding: 60px 10%;
+    background: radial-gradient(circle, #231f20 30%, #0e0e0e);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Fade-in keyframe */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover Animation for Icons */
+.contact-links ul li a {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-links ul li a:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
+
+/* Hover Animation for the Send Button */
+.send-btn {
+    background: #ffcc00;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.send-btn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Smooth Transition for Links */
+.contact-links ul li a {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact-links ul li span {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+}

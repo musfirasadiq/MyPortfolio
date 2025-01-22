@@ -1,0 +1,102 @@
+/* Set background and styling for the entire container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: radial-gradient(circle, #231f20 30%, #0e0e0e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Header Styling */
+  app-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Dark background for header */
+  }
+  
+  app-header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  app-header li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  app-header li a:hover {
+    color: #ffcc00; /* Gold color on hover */
+  }
+  
+  app-header li a:focus,
+  app-header li a:active {
+    color: #ff9900; /* Slightly darker gold for active or focus state */
+    outline: none;
+  }
+  
+  /* Content Styling */
+  .content-wrapper {
+    flex-grow: 1; /* Ensures content takes up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .content-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 1000px; /* Prevents the card from getting too wide on large screens */
+    box-sizing: border-box;
+  }
+  
+  /* Footer Styling */
+  app-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.8); /* Dark background for footer */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-card {
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    app-header ul {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .content-card {
+      padding: 15px;
+    }
+  
+    app-header ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    app-header li a {
+      font-size: 14px;
+    }
+  }
+  
