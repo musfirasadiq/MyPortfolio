@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/angular-portfolio",
             "index": "src/index.html",
-             "baseHref": "/MusfiraPortfolio/",
+             "baseHref": "./",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"

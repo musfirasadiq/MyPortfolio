@@ -1,81 +1,144 @@
 /* Hero Section Styling */
 .hero {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle, #231f20 30%, #0e0e0e);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* Prevent any overflow during animation */
+  padding: 20px; /* Add padding for spacing on small devices */
+}
+
+/* Hero Container */
+.hero-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping of elements */
+}
+
+/* Left Side Styling */
+.hero-left {
+  flex: 1;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1.5s ease-out forwards; /* Fade-in and slide-up animation */
+  animation-delay: 0.3s; /* Delay for smoother animation */
+  margin-bottom: 20px; /* Add space between sections */
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-left h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* Right Side Styling */
+.hero-right {
+  flex: 1;
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 0.5s; /* Delay for smoother animation */
+  text-align: left; /* Align text to the left on larger screens */
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from a slight offset below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+/* Navigation Dots */
+.nav-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the dots */
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+/* Responsive Design for Small Devices */
+
+/* For devices up to 768px wide (tablets and smaller screens) */
+@media screen and (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-left h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-right {
+    font-size: 0.9rem;
+  }
+
+  .hero-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: radial-gradient(circle, #231f20 30%, #0e0e0e);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden; /* Prevent any overflow during animation */
   }
-  
-  /* Hero Container */
+
+  .hero-left {
+    margin-bottom: 20px; /* Space between name/title and description */
+  }
+}
+
+/* For devices up to 480px wide (smartphones and smaller screens) */
+@media screen and (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+  }
+
+  .hero-left h2 {
+    font-size: 1rem; /* Smaller subheading */
+  }
+
+  .hero-right {
+    font-size: 0.85rem; /* Adjust text size for readability */
+    padding: 0 10px; /* Add padding for better spacing */
+  }
+
   .hero-container {
-    display: flex;
-    width: 80%;
-    max-width: 1200px;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
     align-items: center;
   }
-  
-  /* Left Side Styling */
+
   .hero-left {
-    flex: 1;
-    opacity: 0; /* Initially hidden */
-    animation: fadeInUp 1.5s ease-out forwards; /* Fade-in and slide-up animation */
-    animation-delay: 0.3s; /* Delay for smoother animation */
+    margin-bottom: 20px;
   }
-  
-  .hero-left h1 {
-    font-size: 3rem;
-    font-weight: 700;
+
+  /* Reduce padding around the hero section */
+  .hero {
+    padding: 10px;
   }
-  
-  .hero-left h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-top: 10px;
-  }
-  
-  /* Right Side Styling */
-  .hero-right {
-    flex: 1;
-    max-width: 600px;
-    line-height: 1.6;
-    font-size: 1rem;
-    opacity: 0; /* Initially hidden */
-    animation: fadeInUp 1.5s ease-out forwards;
-    animation-delay: 0.5s; /* Delay for smoother animation */
-  }
-  
-  /* Fade-in and Slide-up Animation */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px); /* Start from a slight offset below */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0); /* Move to original position */
-    }
-  }
-  
-  /* Navigation Dots */
-  .nav-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-  
+}
