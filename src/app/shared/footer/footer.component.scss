@@ -1,21 +1,37 @@
-/* Sticky Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .sticky-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #2c2c2c; /* Matches the design of the skills section */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow at the top of the footer */
-    z-index: 1000; /* Ensures it stays on top of other elements */
-  }
-  
-  /* Add padding to prevent content overlap */
-  body {
-    padding-bottom: 50px; /* Adjust based on footer height */
-  }
-  
+  margin-top: auto; /* pushes footer to bottom */
+  width: 100%;
+  background: rgba(42, 82, 152, 0.85);
+  color: #f0f0f0;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+
+  transition: background-color 0.3s ease;
+}
+
+.sticky-footer:hover {
+  background: rgba(42, 82, 152, 1);
+}
+
+.sticky-footer p {
+  margin: 0;
+}

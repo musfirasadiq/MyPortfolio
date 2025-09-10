@@ -1,110 +1,144 @@
-/* Experience Section */
+// Import Sass color functions
+@use "sass:color";
+
+// Variables
+$primary-color: #222222;          // dark charcoal
+$accent-color: #c0c0c0;           // silver
+$background-gradient: linear-gradient(135deg, #000000 0%, #2f2f2f 100%); // black to dark gray
+$card-bg: #1a1a1a;                // very dark gray card background
+$card-shadow: rgba(255, 255, 255, 0.1); // subtle white-ish shadow
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
 .experience-container {
-    padding: 60px 10%;
-    background: radial-gradient(circle, #231f20 30%, #0e0e0e);
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-  }
-  
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: $font-primary;
+  color: #eee; // light text for dark background
+  background: $background-gradient;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+
   .section-title {
     font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    border-bottom: 2px solid white;
-    display: inline-block;
-  }
-  
-  /* Experience Card */
-  .experience-card {
-    background: #181818;
-    color: white;
-    padding: 20px;
-    max-width: 800px;
-    width: 100%;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    text-align: left;
-  }
-  
-  .company-header {
+    font-weight: 900;
+    color: #f5f5f5;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 3rem;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
   }
-  
-  .company-header h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ffcc00;
-  }
-  
-  .job-title {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #ffcc00;
-  }
-  
-  .job-duration {
-    font-size: 1rem;
-    color: #aaa;
-  }
-  
-  .experience-description ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .experience-description li {
-    margin: 8px 0;
-    font-size: 1rem;
-    position: relative;
-    padding-left: 20px;
-  }
-  
-  .experience-description li::before {
-    content: "✔";
-    color: #ffcc00;
-    position: absolute;
-    left: 0;
-  }
-  
-  .highlight {
-    color: #ffcc00;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .highlight:hover {
-    text-decoration: underline;
-  }
-  
-  /* Animation */
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .fade-in {
+
+  .experience-card {
+    background: $card-bg;
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 12px 30px $card-shadow;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-  }
-  
-  /* Add a delay for each experience card */
-  .experience-card:nth-child(1) {
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s forwards;
     animation-delay: 0.2s;
+
+    &:hover {
+      box-shadow: 0 25px 50px rgba(255, 255, 255, 0.25);
+      transform: translateY(-5px);
+    }
+
+    .company-header {
+      h2 {
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: $primary-color;
+        margin-bottom: 0.3rem;
+      }
+
+      .job-title {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: color.adjust($primary-color, $lightness: 20%);
+        margin-bottom: 0.2rem;
+      }
+
+      .job-duration {
+        font-size: 0.95rem;
+        color: #999;
+        margin-bottom: 0.5rem;
+      }
+
+      .highlight {
+        color: $accent-color;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: color.adjust($accent-color, $lightness: 15%);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .experience-description {
+      ul {
+        margin-top: 1rem;
+        padding-left: 1.2rem;
+        list-style-type: disc;
+        color: #bbb;
+        font-size: 1rem;
+        line-height: 1.6;
+
+        li {
+          margin-bottom: 0.7rem;
+        }
+      }
+    }
   }
-  .experience-card:nth-child(2) {
-    animation-delay: 0.4s;
+}
+
+// Fade-in animation keyframes
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .experience-card:nth-child(3) {
-    animation-delay: 0.6s;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 3rem 1.5rem;
+
+    .section-title {
+      font-size: 2.4rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .experience-card {
+      padding: 1.5rem 1.8rem;
+
+      .company-header {
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .job-title {
+          font-size: 1rem;
+        }
+
+        .job-duration {
+          font-size: 0.9rem;
+        }
+      }
+
+      .experience-description {
+        ul {
+          font-size: 0.95rem;
+        }
+      }
+    }
   }
-  
+}
